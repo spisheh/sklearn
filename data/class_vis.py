@@ -6,7 +6,7 @@ import pylab as pl
 import numpy as np
 
 
-def draw(clf, X_test, y_test):
+def draw(clf, X_test, y_test, path):
     x_min = 0.0; x_max = 1.0
     y_min = 0.0; y_max = 1.0
 
@@ -34,4 +34,4 @@ def draw(clf, X_test, y_test):
     plt.legend()
     plt.xlabel("bumpiness")
     plt.ylabel("grade")
-    plt.savefig("test.png")
+    plt.savefig(path+"/test.png")

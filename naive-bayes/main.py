@@ -3,6 +3,8 @@
 	and make a plot that visually shows
 	the decision boundary
 """
+import sys, os
+sys.path.append('../data/')
 from prep_terrain_data import makeTerrainData
 from class_vis import draw
 from ClassifyNB import classify
@@ -24,4 +26,5 @@ bumpy_slow = [features_train[ii][1] for ii in range(0, len(features_train)) if l
 clf = classify(features_train, labels_train)
 
 ### draw the decision boundary with the text points overlaid
-draw(clf, features_test, labels_test)
+draw(clf, features_test, labels_test, os.getcwd())
+
