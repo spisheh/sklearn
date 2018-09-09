@@ -14,7 +14,7 @@ features_train, labels_train, features_test, labels_test = makeTerrainData()
 
 
 from sklearn.tree import DecisionTreeClassifier as DTC
-clf = DTC()
+clf = DTC(min_samples_split=50)
 
 
 #### now your job is to fit the classifier
