@@ -4,6 +4,9 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import pylab as pl
 import numpy as np
+import base64
+import json
+import subprocess
 
 
 def draw(clf, X_test, y_test, path):
@@ -34,4 +37,18 @@ def draw(clf, X_test, y_test, path):
     plt.legend()
     plt.xlabel("bumpiness")
     plt.ylabel("grade")
-    plt.savefig(path+"/test.png")
+    plt.savefig(path+"/result.png")
+
+
+
+"""
+def output_image(name, format, im_bytes):
+
+    image_start = "BEGIN_IMAGE_f9825uweof8jw9fj4r8"
+    image_end = "END_IMAGE_0238jfw08fjsiufhw8frs"
+    data = {}
+    data['name'] = name
+    data['format'] = format
+    data['bytes'] = base64.encodestring(im_bytes).decode('ascii')
+    print (image_start+json.dumps(data)+image_end)
+"""
